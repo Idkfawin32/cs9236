@@ -1,6 +1,6 @@
 # CS9236 Library
 
-The CS9236 library provides an interface for working with the CS9236 MIDI communication protocol. It allows you to control and communicate with CS9236 devices using an Arduino or compatible microcontroller. This library provides an easy-to-use API for sending MIDI messages and commands to the CS9236 device.
+The CS9236 library provides an interface for working with the Crystal CS9236 Wavetable Synthesizer Chip. It allows you to control and communicate with the chip using an Arduino or compatible microcontroller. This library provides an easy-to-use API for sending MIDI messages and commands to the Crystal CS9236.
 
 ## Installation
 
@@ -13,32 +13,7 @@ To use this library in your Arduino project, follow these steps:
 
 ## Usage
 
-To use the CS9236 library, you'll need to create an instance of the `CS9236` class and initialize it with the appropriate parameters. Here's a basic example of how to get started:
-
-
-#include <CS9236.h>
-
-// Define your CS9236 communication parameters
-uint8_t rsPin = 10;  // Replace with the actual pin number
-Stream *communicationStream = &Serial1;  // Replace with your communication stream
-
-// Create an instance of the CS9236 class
-CS9236 cs9236(rsPin, communicationStream);
-
-void setup() {
-  // Initialize the CS9236 device
-  cs9236.Init();
-
-  // Send MIDI messages and commands
-  cs9236.NoteOn(0, 60, 100); // Example: Turn on note 60 on channel 0 with velocity 100
-}
-
-void loop() {
-  // Your main loop code here
-}
-
-
-Be sure to replace the `rsPin` and `communicationStream` variables with the actual pin number and communication stream you are using.
+To use the CS9236 library, you'll need to create an instance of the `CS9236` class and initialize it with the appropriate parameters. I've included an example project to help demonstrate this.
 
 ## API Reference
 
